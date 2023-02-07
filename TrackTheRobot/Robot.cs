@@ -54,7 +54,7 @@ public abstract class Move
 {
     public abstract string Key { get; protected set; }
     public abstract int Position { get; protected set; }
-    public abstract void ChangePosition(int value);
+    public abstract void ChangePosition(int newPosition);
 }
 
 public class Up : Move
@@ -70,7 +70,7 @@ public class Up : Move
 
     public override int Position { get; protected set; }
 
-    public override void ChangePosition(int value) => Position = +value;
+    public override void ChangePosition(int newPosition) => Position = +newPosition;
 }
 
 public class Down : Move
@@ -86,7 +86,7 @@ public class Down : Move
 
     public override int Position { get; protected set; }
 
-    public override void ChangePosition(int value) => Position = -value;
+    public override void ChangePosition(int newPosition) => Position = -newPosition;
 }
 
 public class Right : Move
@@ -102,7 +102,7 @@ public class Right : Move
 
     public override int Position { get; protected set; }
 
-    public override void ChangePosition(int value) => Position = +value;
+    public override void ChangePosition(int newPosition) => Position = +newPosition;
 }
 
 
@@ -119,5 +119,5 @@ public class Left : Move
 
     public override int Position { get; protected set; }
 
-    public override void ChangePosition(int value) => Position = -value;
+    public override void ChangePosition(int newPosition) => Position = -newPosition;
 }
