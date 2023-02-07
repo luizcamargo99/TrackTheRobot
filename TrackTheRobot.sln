@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackTheRobot", "TrackTheRobot\TrackTheRobot.csproj", "{3D3EEACE-401A-4CE5-8A2E-2093E9572D61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackTheRobot.Tests", "TrackTheRobot.Tests\TrackTheRobot.Tests.csproj", "{984703F7-C2CC-431E-A2E3-7BF5DA743AEA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D3EEACE-401A-4CE5-8A2E-2093E9572D61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D3EEACE-401A-4CE5-8A2E-2093E9572D61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D3EEACE-401A-4CE5-8A2E-2093E9572D61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D3EEACE-401A-4CE5-8A2E-2093E9572D61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{984703F7-C2CC-431E-A2E3-7BF5DA743AEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{984703F7-C2CC-431E-A2E3-7BF5DA743AEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{984703F7-C2CC-431E-A2E3-7BF5DA743AEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{984703F7-C2CC-431E-A2E3-7BF5DA743AEA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6734D084-4D43-4480-AFD0-771A41E43744}
+	EndGlobalSection
+EndGlobal
