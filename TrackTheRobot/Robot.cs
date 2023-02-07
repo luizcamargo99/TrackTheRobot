@@ -22,20 +22,23 @@ public class Robot
 
     private int GetPositionByInstructions(string[] instructions)
     {
-        var result = 0;
+        var position = 0;
 
         for (int i = 0; i < instructions.Length; i++)
-        {         
-            var move = _moves.FirstOrDefault(x => instructions[i].Contains(x.Key.ToLower()));
+        {
+            var instruction = instructions[i].Split(" ");
+            var instructionKey = instruction[0];
+            var positionToChange = int.Parse(instruction[1]);
+            var move = _moves.FirstOrDefault(x => x.Key.ToLower() == instructionKey);
 
             if (move is null)
                 continue;
 
-            var value = int.Parse(instructions[i].Replace(move.Key, ""));
-            result += move.MoveAction(value);
+            move.ChangePosition(positionToChange);
+            position += move.Position;
         }
 
-        return result;
+        return position;
     }
 }
 
@@ -50,7 +53,8 @@ public static class MoveConstants
 public abstract class Move
 {
     public abstract string Key { get; protected set; }
-    public abstract int MoveAction(int value);
+    public abstract int Position { get; protected set; }
+    public abstract void ChangePosition(int value);
 }
 
 public class Up : Move
@@ -64,10 +68,9 @@ public class Up : Move
         protected set { }
     }
 
-    public override int MoveAction(int value)
-    {
-        return +value;
-    }
+    public override int Position { get; protected set; }
+
+    public override void ChangePosition(int value) => Position = +value;
 }
 
 public class Down : Move
@@ -81,10 +84,9 @@ public class Down : Move
         protected set { }
     }
 
-    public override int MoveAction(int value)
-    {
-        return -value;
-    }
+    public override int Position { get; protected set; }
+
+    public override void ChangePosition(int value) => Position = -value;
 }
 
 public class Right : Move
@@ -98,10 +100,9 @@ public class Right : Move
         protected set { }
     }
 
-    public override int MoveAction(int value)
-    {
-        return +value;
-    }
+    public override int Position { get; protected set; }
+
+    public override void ChangePosition(int value) => Position = +value;
 }
 
 
@@ -116,8 +117,7 @@ public class Left : Move
         protected set { }
     }
 
-    public override int MoveAction(int value)
-    {
-        return -value;
-    }
+    public override int Position { get; protected set; }
+
+    public override void ChangePosition(int value) => Position = -value;
 }
